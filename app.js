@@ -8,5 +8,5 @@ Object.entries(window.EA_DOWNLOADS||{}).forEach(([platform,url])=>{
  if(!url)return;
  try{const parsed=new URL(url);if(parsed.protocol!=='https:')return;}catch{return;}
  const link=document.querySelector('[data-download="'+platform+'"]');
- if(link){link.href=url;link.removeAttribute('aria-disabled');link.querySelector('span').textContent='Beta 0.2.3 · Download ↗';}
+ if(link){link.href=url;link.removeAttribute('aria-disabled');if(link.querySelector('span').textContent==='Coming soon')link.querySelector('span').textContent='Beta 0.2.3 · Download ↗';}
 });
