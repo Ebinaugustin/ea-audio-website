@@ -17,3 +17,12 @@
 .message-body .message-signoff{border-left:2px solid var(--red);padding-left:24px;margin-top:32px;font-size:17px;line-height:1.8}
 @media(max-width:900px){.developer-message{gap:40px}}
 @media(max-width:650px){.developer-message{grid-template-columns:1fr;gap:35px;padding-bottom:60px}.message-heading h2{font-size:48px}.message-promise{margin-top:25px;font-size:34px}.message-body p{font-size:14px;line-height:1.9}.message-body .message-signoff{font-size:15px;padding-left:18px}.hero-bottom>a{display:inline-block}footer>a:not(.brand){width:100%}}
+
+.download-totals{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid #c8c3ba;padding:24px 0 10px}
+.download-totals>div{display:flex;align-items:baseline;gap:15px;flex-wrap:wrap}
+.download-total-value{font-size:48px;line-height:1.1;font-weight:600;letter-spacing:-2px;color:#ae302d;font-variant-numeric:tabular-nums}
+.download-total-label{font-size:14px;font-weight:500}
+.download-totals>p{font-size:11px;color:#615e59;line-height:1.8;margin:0}
+.count-updated{font-size:10px;color:#615e59;margin:0 0 24px}
+.download-grid .platform-download-count{font-size:11px;color:#615e59;margin:12px 0 0;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.download-totals{align-items:flex-start;flex-direction:column;gap:10px}.download-total-value{font-size:42px}.download-totals>p{font-size:11px}.count-updated{line-height:1.7}}
