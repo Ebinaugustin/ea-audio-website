@@ -26,3 +26,9 @@
 .count-updated{font-size:10px;color:#615e59;margin:0 0 24px}
 .download-grid .platform-download-count{font-size:11px;color:#615e59;margin:12px 0 0;font-variant-numeric:tabular-nums}
 @media(max-width:650px){.download-totals{align-items:flex-start;flex-direction:column;gap:10px}.download-total-value{font-size:42px}.download-totals>p{font-size:11px}.count-updated{line-height:1.7}}
+
+/* EA Native Automation product announcement */
+.automation-teaser{border-top:1px solid var(--line);padding-bottom:70px}.automation-teaser em{color:var(--red)}.automation-teaser-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.automation-teaser-image{display:block;background:#0b0c0d;padding:18px;border:1px solid var(--line)}.automation-teaser-image img{display:block;width:100%;height:auto}.automation-badge{font-size:10px;letter-spacing:1.6px;color:var(--red)}.automation-teaser-grid h3{font-family:'Instrument Serif',Georgia,serif;font-size:43px;line-height:1.15;margin:20px 0}.automation-teaser-grid p:not(.automation-badge){color:var(--muted);font-size:14px;line-height:1.9}.automation-teaser-grid .hero-actions{margin-top:28px;flex-wrap:wrap}.automation-teaser-grid .automation-teaser-note{font-size:11px!important;margin-top:28px}.automation-teaser-note a{text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
+@media(max-width:900px){.automation-teaser-grid{gap:30px}.automation-teaser-grid h3{font-size:35px}}
+@media(max-width:650px){.automation-teaser-grid{grid-template-columns:1fr;gap:28px}nav a:nth-child(2){display:inline}nav a[href="#workflow"]{display:none}nav{gap:13px}nav a{font-size:10px}.automation-teaser{padding-bottom:55px}.automation-teaser-image{padding:10px}.automation-teaser-grid h3{font-size:35px}}
+@media(max-width:380px){.header nav a[href="#roommatch"]{display:none}}
