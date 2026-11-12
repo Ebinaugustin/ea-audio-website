@@ -23,3 +23,7 @@ Optional support: the homepage `#support` section links to [Ko-fi](https://ko-fi
 Approved and published on 12 November 2026. The site uses the existing charcoal, ivory and coral palette, self-hosted pixel and monospace fonts, an accessible mobile menu, pixel-art illustrations and direct product descriptions. The developer message is expandable at the top of the homepage. Existing download, purchase, music and support links are preserved.
 
 The new design is in pixel.css and pixel.js; font licences are in assets/fonts/. All four public pages load this theme after their product styles.
+
+Dialogue Alignment Engine: `alignment.html`, free Windows x64 2.0.0-preview, with a homepage announcement, shared navigation link and support-form selection. `alignment.css` provides its page/announcement styles. The actual compiled interface screenshot uses generated audio.
+
+The versioned download in `downloads/dialogue-alignment-engine/2.0.0-preview/` includes VST3/ARA, unsigned AAX Native, documentation, licences and corresponding source. The separate README, validation and licence files are copies from that package. SHA256SUMS.txt verifies the full ZIP. Keep download filenames and checksums in sync when updating; do not silently replace a published version. AAX is unsigned and cannot load in standard retail Pro Tools. Real-host and production-dialogue qualification are pending.

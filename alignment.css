@@ -1,0 +1,44 @@
+.alignment-hero{padding-top:42px}
+.alignment-heading{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:end;margin:46px 0 48px}
+.alignment-heading h1{font-size:clamp(65px,7.3vw,112px)}
+.alignment-heading .intro{margin-top:0;max-width:510px}
+.alignment-meta{font-size:12px;color:var(--muted);line-height:1.8;margin:20px 0 0}
+.alignment-preview-note{font-size:12px;color:var(--ink);line-height:1.8;border-left:2px solid var(--red);padding-left:14px;margin:22px 0 0;max-width:460px}
+.alignment-figure{margin:0}
+.alignment-figure .product-frame{border-top:1px solid var(--line);border-radius:8px;padding:16px}
+.alignment-strip{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 24px;border-bottom:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:9px;letter-spacing:1.3px}
+.alignment-detail{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;padding:34px 0 16px}
+.alignment-detail h3{font:400 34px/1.2 'Instrument Serif',Georgia,serif;max-width:330px;margin:0}
+.alignment-detail p{font-size:14px;line-height:1.9;color:var(--muted);margin:0;max-width:650px}
+.alignment-download{padding-top:75px}
+.alignment-download-panel{display:grid;grid-template-columns:1fr 1fr;gap:70px;border:1px solid var(--line);background:var(--surface);padding:46px;border-radius:8px}
+.alignment-download-panel h2{font-size:clamp(44px,4.2vw,66px)}
+.alignment-download-panel .intro{font-size:15px;margin:24px 0}
+.alignment-download-button{justify-content:space-between;min-width:280px}
+.alignment-small{font-size:13px;line-height:1.9;color:var(--muted);margin:22px 0 0;max-width:540px}
+.alignment-doc-links{display:flex;flex-wrap:wrap;gap:13px 24px;margin-top:25px;font-size:11px}
+.alignment-doc-links a{border-bottom:1px solid #666661;padding-bottom:3px}
+.alignment-doc-links a:hover{color:var(--red)}
+.alignment-install h3{font-size:22px;margin:0 0 22px}
+.alignment-install ol{padding-left:20px;color:var(--muted);font-size:14px;line-height:1.85;margin:0}
+.alignment-install li{padding:0 0 14px 5px}
+.alignment-install strong{color:var(--ink);font-weight:500}
+.alignment-install code{overflow-wrap:anywhere;font-size:12px}
+.alignment-aax{border-top:1px solid #565452;margin-top:28px;padding-top:22px}
+.alignment-aax>strong{color:var(--red);font-size:13px}
+.alignment-aax p{font-size:12px;line-height:1.85;color:var(--muted);margin:8px 0 0}
+.alignment-faq{padding-bottom:75px}
+.alignment-teaser{border-top:1px solid var(--line);padding-top:42px;padding-bottom:46px}
+.alignment-teaser-grid{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:50px}
+.alignment-teaser-grid h2{font-size:clamp(42px,4.5vw,68px)}
+.alignment-teaser-grid .intro{font-size:14px;max-width:490px;margin:24px 0}
+.alignment-teaser-grid .hero-actions{flex-wrap:wrap}
+.alignment-teaser-grid img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
+.alignment-teaser-grid .alignment-meta{font-size:11px}
+@media(max-width:950px){.alignment-heading{gap:35px}.alignment-download-panel{gap:35px;padding:30px}.alignment-detail{gap:35px}.alignment-teaser-grid{gap:30px}.alignment-heading h1{font-size:74px}}
+@media(max-width:750px){.alignment-heading,.alignment-download-panel,.alignment-detail,.alignment-teaser-grid{grid-template-columns:1fr;gap:28px}.alignment-heading{margin-top:32px}.alignment-heading h1{font-size:clamp(56px,12vw,85px)}.alignment-hero .hero-top{gap:20px;align-items:start;flex-wrap:wrap}.alignment-hero .edition{font-size:8px}.alignment-figure .product-frame{padding:5px}.alignment-download{padding-top:55px}.alignment-download-panel{padding:24px}.alignment-download-button{width:100%;min-width:0}.alignment-detail h3{max-width:none}.alignment-faq{padding-bottom:55px}.alignment-teaser{padding-top:35px;padding-bottom:35px}.alignment-strip{font-size:8px}}
+
+/* Match the published pixel theme and its existing mobile menu. */
+body .pixel-product-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1050px) and (min-width:761px){body .pixel-product-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){body .pixel-product-nav{grid-template-columns:1fr}}
