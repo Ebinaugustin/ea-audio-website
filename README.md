@@ -16,3 +16,10 @@ EA Native Automation: `automation.html`, with a homepage announcement and naviga
 
 Optional support: the homepage `#support` section links to [Ko-fi](https://ko-fi.com/ebinaugustin) and UPI ID `ebin.augustin55@oksbi` with no preset amount, plus a Copy ID fallback for desktop. Music links provide another way to support EA Audio. RoomMatch is free and will remain free forever; this promise does not apply to every EA Audio product. Contributions do not unlock RoomMatch downloads.
 
+
+
+## 8-bit design
+
+Approved and published on 12 November 2026. The site uses the existing charcoal, ivory and coral palette, self-hosted pixel and monospace fonts, an accessible mobile menu, pixel-art illustrations and direct product descriptions. The developer message is expandable at the top of the homepage. Existing download, purchase, music and support links are preserved.
+
+The new design is in pixel.css and pixel.js; font licences are in assets/fonts/. All four public pages load this theme after their product styles.
