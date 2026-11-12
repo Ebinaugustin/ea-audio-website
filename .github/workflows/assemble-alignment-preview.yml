@@ -1,0 +1,46 @@
+name: Assemble alignment preview download
+on:
+  push:
+    branches: [main]
+    paths: ['.release-upload/**']
+permissions:
+  contents: write
+jobs:
+  assemble:
+    if: github.repository == 'Ebinaugustin/ea-audio-website'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Verify download and prepare website
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, shutil
+          root = Path.cwd().resolve()
+          upload = root / '.release-upload'
+          manifest = json.loads((upload / 'manifest.json').read_text())
+          data = b''.join((upload / f'part-{i:03d}').read_bytes() for i in range(manifest['parts']))
+          assert len(data) == 35002195, 'Download size mismatch'
+          assert hashlib.sha256(data).hexdigest() == 'bb41d84ff2b70de3d663d4d528fcf268841b6355a2321e1ab5a125db613ac112', 'Download checksum mismatch'
+          package = root / 'downloads/dialogue-alignment-engine/2.0.0-preview/Dialogue_Alignment_Engine_2_0_0_Windows_Preview.zip'
+          package.parent.mkdir(parents=True, exist_ok=True)
+          package.write_bytes(data)
+          for entry in manifest['files']:
+              target = (root / entry['path']).resolve()
+              assert target.is_relative_to(root) and '.git' not in target.parts
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_text(entry['content'], encoding='utf-8')
+          image = root / 'assets/alignment/interface.png'
+          image.parent.mkdir(parents=True, exist_ok=True)
+          shutil.copyfile(upload / 'interface.png', image)
+          shutil.rmtree(upload)
+          print('Verified original ZIP and prepared complete free-download website update.')
+          PY
+      - name: Publish verified files to main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m 'Publish free Dialogue Alignment Engine 2.0.0 preview'
+          git push origin HEAD:main
