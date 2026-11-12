@@ -32,3 +32,6 @@ html{scroll-padding-top:110px}body{font:14px/1.85 var(--mono);background-color:v
 @media(max-width:1050px) and (min-width:761px){.pixel-hero h1{font-size:25px!important}}
 @media(max-width:760px){.pixel-hero h1{font-size:clamp(17px,4.5vw,28px)!important;line-height:1.75!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}a,button,summary{transition:none}}
+
+/* Preserve the original EA logo across the pixel theme. */
+.header .brand img,footer .brand img{width:42px;height:28px;filter:none;transform:none;object-fit:contain;image-rendering:auto}
